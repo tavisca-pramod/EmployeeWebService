@@ -13,32 +13,35 @@ namespace EmployeeManagement
     {
         public Employee GetEmployee(long employeeId)
         {
-            return null;
+            return EmployeeData.EmployeeList.First(x => x.Id.Equals(employeeId));
         }
 
         public List<Employee> GetEmployees(string employeeName)
         {
-            return null;
-        }
-
-        public void createEmployee(Employee employee)
-        {
-            return;
-        }
-
-        public void addRemarksToEmplyee(long employeeId)
-        {
-            return;
+            return EmployeeData.EmployeeList.FindAll(x => x.Name.Equals(employeeName));
         }
 
         public List<Employee> GetEmployees()
         {
-            return null;
+            return EmployeeData.EmployeeList;
         }
 
         public List<Employee> GetEmployeesWithRemarks()
         {
-            return null;
+            return EmployeeData.EmployeeList.FindAll(x => x.Remarks.Count > 0);
+        }
+        
+        public void createEmployee(Employee employee)
+        {
+            EmployeeData.EmployeeList.Add(employee);
+        }
+
+        public void addRemarksToEmplyee(long employeeId, Remark remark)
+        {
+            var employee = EmployeeData.EmployeeList.First(x => x.Id.Equals(employeeId));
+            employee.Remarks.Add(remark);
+            EmployeeData.EmployeeList.Remove(employee);
+            EmployeeData.EmployeeList.Add(employee);
         }
     }
 }
