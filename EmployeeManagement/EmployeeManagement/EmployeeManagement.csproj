@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeData.cs" />
     <Compile Include="EmployeeManagementService.svc.cs">
       <DependentUpon>EmployeeManagementService.svc</DependentUpon>
     </Compile>

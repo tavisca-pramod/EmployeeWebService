@@ -13,6 +13,6 @@ namespace EmployeeManagement
         void createEmployee(Employee employee);
 
         [OperationContract]
-        void addRemarksToEmplyee(long employeeId);
+        void addRemarksToEmplyee(long employeeId, Remark remark);
     }
 }
