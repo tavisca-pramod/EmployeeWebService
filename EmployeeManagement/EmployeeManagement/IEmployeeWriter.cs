@@ -10,9 +10,9 @@ namespace EmployeeManagement
     public interface IEmployeeWriter
     {
         [OperationContract]
-        void createEmployee(Employee employee);
+        void CreateEmployee(Employee employee, Remark remark);
 
         [OperationContract]
-        void addRemarksToEmplyee(long employeeId, Remark remark);
+        void AddRemarksToEmplyee(long employeeId, Remark remark);
     }
 }

@@ -1,11 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagement", "EmployeeManagement\EmployeeManagement.csproj", "{DE2BF414-C713-43EA-957A-C7405322069A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementTestSuit", "EmployeeManagementTestSuit\EmployeeManagementTestSuit.csproj", "{F6ABB145-9447-41C0-886E-E41EFE13E1E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +13,6 @@ Global
 		{DE2BF414-C713-43EA-957A-C7405322069A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE2BF414-C713-43EA-957A-C7405322069A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE2BF414-C713-43EA-957A-C7405322069A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6ABB145-9447-41C0-886E-E41EFE13E1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6ABB145-9447-41C0-886E-E41EFE13E1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6ABB145-9447-41C0-886E-E41EFE13E1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6ABB145-9447-41C0-886E-E41EFE13E1E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
