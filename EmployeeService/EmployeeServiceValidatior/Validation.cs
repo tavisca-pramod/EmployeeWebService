@@ -24,6 +24,12 @@ namespace EmployeeServiceValidatior
 
         public object BeforeCall(string operationName, object[] inputs)
         {
+            if (operationName == "CreateEmployeeWithRemark")
+            {
+                ValidateCreateEmployeeWithRemarkCall(inputs);
+                return null;
+            }
+            
             if (operationName == "CreateEmployee")
             {
                 ValidateCreateEmployeeCall(inputs);
@@ -35,8 +41,41 @@ namespace EmployeeServiceValidatior
                 ValidateAddRemarkCall(inputs);
                 return null;
             }
+            
+            if (operationName == "DeleteEmployeeById")
+            {
+                ValidateDeleteEmployeeByIdCall(inputs);
+                return null;
+            }
+
+            if (operationName == "GetEmployeeDetailsById")
+            {
+                ValidateGetEmployeeDetailsByIdCall(inputs);
+                return null;
+            }
+
+            if (operationName == "GetEmployeesByName")
+            {
+                ValidateGetEmployeesByNameCall(inputs);
+                return null;
+            }
 
             return null;
+        }
+
+        private void ValidateGetEmployeesByNameCall(object[] inputs)
+        {
+            ValidateEmployeeName((string)inputs[0]);
+        }
+
+        private void ValidateGetEmployeeDetailsByIdCall(object[] inputs)
+        {
+            ValidateEmployeeId((Int32)inputs[0]);
+        }
+
+        private void ValidateDeleteEmployeeByIdCall(object[] inputs)
+        {
+            ValidateEmployeeId((Int32)inputs[0]);
         }
 
         private void ValidateAddRemarkCall(object[] inputs)
@@ -52,11 +91,35 @@ namespace EmployeeServiceValidatior
                 {
                     string remark = (String)inputs[index];
 
-                    ValidateRemarkName(remark);
-                    ValidateRemarkSize(remark);
+                    ValidateRemark(remark);
                 }
             }
         }
+
+        private void ValidateCreateEmployeeWithRemarkCall(object[] inputs)
+        {
+            for (int index = 0; index < inputs.Length; index++)
+            {
+                if (index == 0)
+                {
+                    ValidateEmployeeId((Int32)inputs[index]);
+                }
+
+                if (index == 1)
+                {
+                    string employeeName = (String)inputs[index];
+
+                    ValidateEmployeeName(employeeName);
+                }
+
+                if (index == 2)
+                {
+                    string remark = (String)inputs[index];
+                    ValidateRemark(remark);
+                }
+            }
+        }
+
 
         private void ValidateCreateEmployeeCall(object[] inputs)
         {
@@ -71,31 +134,35 @@ namespace EmployeeServiceValidatior
                 {
                     string employeeName = (String)inputs[index];
 
-                    ValidateEmployeName(employeeName);
-                    ValidateEmployeNameSize(employeeName);
-                }
-
-                if (index == 2)
-                {
-                    string remark = (String)inputs[index];
-
-                    ValidateRemarkName(remark);
-                    ValidateRemarkSize(remark);
+                    ValidateEmployeeName(employeeName);
                 }
             }
+        }
+
+
+        private void ValidateRemark(string remark)
+        {
+            ValidateRemarkName(remark);
+            ValidateRemarkSize(remark);
+        }
+
+        private void ValidateEmployeeName(string employeeName)
+        {
+            ValidateEmptyEmployeeName(employeeName);
+            ValidateEmployeNameSize(employeeName);
         }
 
         private void ValidateRemarkName(string remark)
         {
             if (remark == null)
             {
-                InvalidRemarkValue fault = new InvalidRemarkValue
+                InvalidRemarkValueFault fault = new InvalidRemarkValueFault
                 {
                     FaultId = 205,
                     Message = "Remark can not be null"
                 };
 
-                throw new FaultException<InvalidRemarkValue>
+                throw new FaultException<InvalidRemarkValueFault>
                     (fault, "Remark can not be null");
             }
         }
@@ -104,12 +171,12 @@ namespace EmployeeServiceValidatior
         {
             if (remark.Length == 0 || remark.Length > 30)
             {
-                InvalidRemarkSize fault = new InvalidRemarkSize
+                InvalidRemarkSizeFault fault = new InvalidRemarkSizeFault
                 {
                     FaultId = 204,
                     Message = "Remark length out of range(1-10)"
                 };
-                throw new FaultException<InvalidRemarkSize>
+                throw new FaultException<InvalidRemarkSizeFault>
                     (fault, "Remark length out of range(1-10)");
             }
         }
@@ -118,40 +185,40 @@ namespace EmployeeServiceValidatior
         {
             if (employeeId <= 0)
             {
-                InvalidIdValue fault = new InvalidIdValue
+                InvalidIdValueFault fault = new InvalidIdValueFault
                 {
                     FaultId = 203,
                     Message = "Employee Id should be greater than 0"
                 };
-                throw new FaultException<InvalidIdValue>
+                throw new FaultException<InvalidIdValueFault>
                     (fault, "Employee Id should be greater than 0");
             }
         }
 
 
-        private void ValidateEmployeName(string employeeName)
+        private void ValidateEmptyEmployeeName(string employeeName)
         {
             if (employeeName == null)
             {
-                InvalidNameValue fault = new InvalidNameValue
+                InvalidNameValueFault fault = new InvalidNameValueFault
                 {
                     FaultId = 202,
                     Message = "Employee Name can not be null"
                 };
 
-                throw new FaultException<InvalidNameValue>
+                throw new FaultException<InvalidNameValueFault>
                     (fault, "Employee Name can not be null");
             }
 
 
             if (!employeeRegex.IsMatch(employeeName))
             {
-                InvalidNameValue fault = new InvalidNameValue
+                InvalidNameValueFault fault = new InvalidNameValueFault
                 {
                     FaultId = 202,
                     Message = "Employee Name can contain only letters"
                 };
-                throw new FaultException<InvalidNameValue>
+                throw new FaultException<InvalidNameValueFault>
                     (fault, "Employee Name can contain only letters");
             }
         }
@@ -160,12 +227,12 @@ namespace EmployeeServiceValidatior
         {
             if (employeeName.Length == 0 || employeeName.Length > 10)
             {
-                InvalidNameSize fault = new InvalidNameSize
+                InvalidNameSizeFault fault = new InvalidNameSizeFault
                 {
                     FaultId = 201,
                     Message = "Employee Name length out of range(1-10)"
                 };
-                throw new FaultException<InvalidNameSize>
+                throw new FaultException<InvalidNameSizeFault>
                     (fault, "Employee Name length out of range(1-10)");
             }
         }

@@ -31,11 +31,29 @@ namespace EmployeeService
             return employee;
         }
 
+        public Employee CreateEmployee(int id, string name)
+        {
+            if (_employees.Any(empolyee => empolyee.Id == id))
+            {
+                EmployeeAlreadyExistsFault fault = new EmployeeAlreadyExistsFault
+                {
+                    FaultId = 101,
+                    Message = "Employee with Id " + id + " already exists"
+                };
+                throw new FaultException<EmployeeAlreadyExistsFault>
+                    (fault, "Employee with Id " + id + " already exists");
+            }
+
+            Employee employee = GetEmployeeObject(id, name);
+
+            _employees.Add(employee);
+
+            return employee;
+        }
+
         private static Employee GetEmployeeObject(int id, string name, string remarkText)
         {
-            Employee employee = new Employee();
-            employee.Id = id;
-            employee.Name = name;
+            Employee employee = GetEmployeeObject(id, name);
 
             Remark remark = new Remark();
             remark.RemarkText = remarkText;
@@ -46,6 +64,15 @@ namespace EmployeeService
             return employee;
         }
 
+        private static Employee GetEmployeeObject(int id, string name)
+        {
+            Employee employee = new Employee();
+            employee.Id = id;
+            employee.Name = name;
+
+            return employee;
+        }
+
         public void AddRemark(int id, string remarkText)
         {
             if (_employees.Any(emp => emp.Id == id))
@@ -53,8 +80,8 @@ namespace EmployeeService
                 Employee employee = _employees.Single(emp => emp.Id == id);
 
                 Remark remark = new Remark();
-                remark.RemarkDate= DateTime.Now;
-                remark.RemarkText= remarkText;
+                remark.RemarkDate = DateTime.Now;
+                remark.RemarkText = remarkText;
                 employee.Remarks.Add(remark);
             }
             else
@@ -62,7 +89,7 @@ namespace EmployeeService
                 ResultNotFoundFault fault = new ResultNotFoundFault
                 {
                     FaultId = 102,
-                    Message = "Employee with Id "+id+" does not exist"
+                    Message = "Employee with Id " + id + " does not exist"
                 };
                 throw new FaultException<ResultNotFoundFault>(fault, "Employee with Id " + id + " does not exist");
             }
@@ -118,14 +145,14 @@ namespace EmployeeService
         {
             if (_employees.Any(emp => emp.Name == name))
             {
-                return _employees.FindAll(emp => emp.Name == name);                
+                return _employees.FindAll(emp => emp.Name == name);
             }
             else
             {
                 ResultNotFoundFault fault = new ResultNotFoundFault
                 {
                     FaultId = 103,
-                    Message = "Employees with Name "+ name+" not found"
+                    Message = "Employees with Name " + name + " not found"
                 };
                 throw new FaultException<ResultNotFoundFault>(fault, "Employees with Name " + name + " not found");
 
@@ -137,5 +164,22 @@ namespace EmployeeService
             _employees = new List<Employee>();
         }
 
+        public List<Employee> GetEmployeesWithRemark()
+        {
+            if (_employees.Any(emp => emp.Remarks != null))
+            {
+                return _employees.FindAll(emp => emp.Remarks != null);
+            }
+            else
+            {
+                ResultNotFoundFault fault = new ResultNotFoundFault
+                {
+                    FaultId = 103,
+                    Message = "Employees with remarks not found"
+                };
+                throw new FaultException<ResultNotFoundFault>(fault, "Employees with remarks not found");
+
+            }
+        }
     }
 }

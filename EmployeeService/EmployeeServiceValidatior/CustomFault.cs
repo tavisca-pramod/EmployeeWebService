@@ -3,7 +3,7 @@
 namespace EmployeeService
 {
     [DataContract]
-    public class InvalidNameSize
+    public class InvalidNameSizeFault
     {
         [DataMember]
         public int FaultId { get; set; }
@@ -12,7 +12,7 @@ namespace EmployeeService
     }
     
     [DataContract]
-    public class InvalidNameValue
+    public class InvalidNameValueFault
     {
         [DataMember]
         public int FaultId { get; set; }
@@ -21,7 +21,7 @@ namespace EmployeeService
     }
 
     [DataContract]
-    public class InvalidIdValue
+    public class InvalidIdValueFault
     {
         [DataMember]
         public int FaultId { get; set; }
@@ -30,7 +30,7 @@ namespace EmployeeService
     }
     
     [DataContract]
-    public class InvalidRemarkValue
+    public class InvalidRemarkValueFault
     {
         [DataMember]
         public int FaultId { get; set; }
@@ -39,7 +39,7 @@ namespace EmployeeService
     }
     
     [DataContract]
-    public class InvalidRemarkSize
+    public class InvalidRemarkSizeFault
     {
         [DataMember]
         public int FaultId { get; set; }

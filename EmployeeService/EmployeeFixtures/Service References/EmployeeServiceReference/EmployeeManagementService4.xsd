@@ -21,6 +21,41 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Remark" nillable="true" type="tns:Remark" />
+  <xs:complexType name="InvalidNameValueFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidNameValueFault" nillable="true" type="tns:InvalidNameValueFault" />
+  <xs:complexType name="InvalidNameSizeFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidNameSizeFault" nillable="true" type="tns:InvalidNameSizeFault" />
+  <xs:complexType name="InvalidIdValueFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidIdValueFault" nillable="true" type="tns:InvalidIdValueFault" />
+  <xs:complexType name="InvalidRemarkValueFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidRemarkValueFault" nillable="true" type="tns:InvalidRemarkValueFault" />
+  <xs:complexType name="InvalidRemarkSizeFault">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InvalidRemarkSizeFault" nillable="true" type="tns:InvalidRemarkSizeFault" />
   <xs:complexType name="EmployeeAlreadyExistsFault">
     <xs:sequence>
       <xs:element minOccurs="0" name="FaultId" type="xs:int" />
@@ -28,41 +63,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EmployeeAlreadyExistsFault" nillable="true" type="tns:EmployeeAlreadyExistsFault" />
-  <xs:complexType name="InvalidNameValue">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="InvalidNameValue" nillable="true" type="tns:InvalidNameValue" />
-  <xs:complexType name="InvalidNameSize">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="InvalidNameSize" nillable="true" type="tns:InvalidNameSize" />
-  <xs:complexType name="InvalidIdValue">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="InvalidIdValue" nillable="true" type="tns:InvalidIdValue" />
-  <xs:complexType name="InvalidRemarkValue">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="InvalidRemarkValue" nillable="true" type="tns:InvalidRemarkValue" />
-  <xs:complexType name="InvalidRemarkSize">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="FaultId" type="xs:int" />
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="InvalidRemarkSize" nillable="true" type="tns:InvalidRemarkSize" />
   <xs:complexType name="ResultNotFoundFault">
     <xs:sequence>
       <xs:element minOccurs="0" name="FaultId" type="xs:int" />

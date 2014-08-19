@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomFaultException.cs" />
+    <Compile Include="CustomFault.cs" />
     <Compile Include="EmployeeServiceExtensionElement.cs" />
     <Compile Include="EmployeeServiceNameBehavior.cs" />
     <Compile Include="Validation.cs" />

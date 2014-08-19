@@ -7,7 +7,8 @@ namespace EmployeeService
     public interface IEmployeeReader
     {
         [OperationContract]
-        [FaultContract(typeof(FaultException))]
+        [FaultContract(typeof(ResultNotFoundFault))]
+        [FaultContract(typeof(InvalidIdValueFault))]
         Employee GetEmployeeDetailsById(int id);
 
         [OperationContract(Name = "GetAllEmployees")]
@@ -16,7 +17,13 @@ namespace EmployeeService
 
         [OperationContract(Name = "GetEmployeesByName")]
         [FaultContract(typeof(ResultNotFoundFault))]
+        [FaultContract(typeof(InvalidNameSizeFault))]
+        [FaultContract(typeof(InvalidNameValueFault))]        
         List<Employee> GetEmployees(string name);
+
+        [OperationContract]
+        [FaultContract(typeof(ResultNotFoundFault))]
+        List<Employee> GetEmployeesWithRemark();
     }
 
 }
