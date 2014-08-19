@@ -214,6 +214,311 @@ namespace EmployeeFixtures.EmployeeServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvalidNameValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class InvalidNameValue : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FaultIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FaultId {
+            get {
+                return this.FaultIdField;
+            }
+            set {
+                if ((this.FaultIdField.Equals(value) != true)) {
+                    this.FaultIdField = value;
+                    this.RaisePropertyChanged("FaultId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvalidNameSize", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class InvalidNameSize : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FaultIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FaultId {
+            get {
+                return this.FaultIdField;
+            }
+            set {
+                if ((this.FaultIdField.Equals(value) != true)) {
+                    this.FaultIdField = value;
+                    this.RaisePropertyChanged("FaultId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvalidIdValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class InvalidIdValue : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FaultIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FaultId {
+            get {
+                return this.FaultIdField;
+            }
+            set {
+                if ((this.FaultIdField.Equals(value) != true)) {
+                    this.FaultIdField = value;
+                    this.RaisePropertyChanged("FaultId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvalidRemarkValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class InvalidRemarkValue : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FaultIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FaultId {
+            get {
+                return this.FaultIdField;
+            }
+            set {
+                if ((this.FaultIdField.Equals(value) != true)) {
+                    this.FaultIdField = value;
+                    this.RaisePropertyChanged("FaultId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InvalidRemarkSize", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+    [System.SerializableAttribute()]
+    public partial class InvalidRemarkSize : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int FaultIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FaultId {
+            get {
+                return this.FaultIdField;
+            }
+            set {
+                if ((this.FaultIdField.Equals(value) != true)) {
+                    this.FaultIdField = value;
+                    this.RaisePropertyChanged("FaultId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ResultNotFoundFault", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
     [System.SerializableAttribute()]
     public partial class ResultNotFoundFault : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -280,13 +585,21 @@ namespace EmployeeFixtures.EmployeeServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeManager/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeManager/CreateEmployeeResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.EmployeeAlreadyExistsFault), Action="http://tempuri.org/IEmployeeManager/CreateEmployeeEmployeeAlreadyExistsFaultFault" +
             "", Name="EmployeeAlreadyExistsFault", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidNameValue), Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidNameValueFault", Name="InvalidNameValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidNameSize), Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidNameSizeFault", Name="InvalidNameSize", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidIdValue), Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidIdValueFault", Name="InvalidIdValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidRemarkValue), Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidRemarkValueFault", Name="InvalidRemarkValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidRemarkSize), Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidRemarkSizeFault", Name="InvalidRemarkSize", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
         EmployeeFixtures.EmployeeServiceReference.Employee CreateEmployee(int id, string name, string remarks);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeManager/CreateEmployee", ReplyAction="http://tempuri.org/IEmployeeManager/CreateEmployeeResponse")]
         System.Threading.Tasks.Task<EmployeeFixtures.EmployeeServiceReference.Employee> CreateEmployeeAsync(int id, string name, string remarks);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeManager/AddRemark", ReplyAction="http://tempuri.org/IEmployeeManager/AddRemarkResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidRemarkValue), Action="http://tempuri.org/IEmployeeManager/AddRemarkInvalidRemarkValueFault", Name="InvalidRemarkValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
         [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.ResultNotFoundFault), Action="http://tempuri.org/IEmployeeManager/AddRemarkResultNotFoundFaultFault", Name="ResultNotFoundFault", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidRemarkSize), Action="http://tempuri.org/IEmployeeManager/AddRemarkInvalidRemarkSizeFault", Name="InvalidRemarkSize", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
+        [System.ServiceModel.FaultContractAttribute(typeof(EmployeeFixtures.EmployeeServiceReference.InvalidIdValue), Action="http://tempuri.org/IEmployeeManager/AddRemarkInvalidIdValueFault", Name="InvalidIdValue", Namespace="http://schemas.datacontract.org/2004/07/EmployeeService")]
         void AddRemark(int id, string remarks);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeManager/AddRemark", ReplyAction="http://tempuri.org/IEmployeeManager/AddRemarkResponse")]

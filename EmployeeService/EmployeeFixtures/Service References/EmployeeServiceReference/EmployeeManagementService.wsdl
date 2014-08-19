@@ -153,6 +153,101 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidNameValueFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidNameSizeFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidIdValueFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidRemarkValueFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidRemarkSizeFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_AddRemark_Input_policy">
     <wsp:ExactlyOne>
       <wsp:All>
@@ -191,7 +286,64 @@
       </wsp:All>
     </wsp:ExactlyOne>
   </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_AddRemark_InvalidRemarkValueFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_AddRemark_ResultNotFoundFaultFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_AddRemark_InvalidRemarkSizeFault_Fault">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+          <sp:Header Name="To" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="From" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="FaultTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="ReplyTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="MessageID" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="RelatesTo" Namespace="http://www.w3.org/2005/08/addressing" />
+          <sp:Header Name="Action" Namespace="http://www.w3.org/2005/08/addressing" />
+        </sp:SignedParts>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body />
+        </sp:EncryptedParts>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IEmployeeManager_AddRemark_InvalidIdValueFault_Fault">
     <wsp:ExactlyOne>
       <wsp:All>
         <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
@@ -590,14 +742,38 @@
   <wsdl:message name="IEmployeeManager_CreateEmployee_EmployeeAlreadyExistsFaultFault_FaultMessage">
     <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q1:EmployeeAlreadyExistsFault" />
   </wsdl:message>
+  <wsdl:message name="IEmployeeManager_CreateEmployee_InvalidNameValueFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q2:InvalidNameValue" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeManager_CreateEmployee_InvalidNameSizeFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q3:InvalidNameSize" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeManager_CreateEmployee_InvalidIdValueFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q4:InvalidIdValue" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeManager_CreateEmployee_InvalidRemarkValueFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q5:InvalidRemarkValue" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeManager_CreateEmployee_InvalidRemarkSizeFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q6:InvalidRemarkSize" />
+  </wsdl:message>
   <wsdl:message name="IEmployeeManager_AddRemark_InputMessage">
     <wsdl:part name="parameters" element="tns:AddRemark" />
   </wsdl:message>
   <wsdl:message name="IEmployeeManager_AddRemark_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddRemarkResponse" />
   </wsdl:message>
+  <wsdl:message name="IEmployeeManager_AddRemark_InvalidRemarkValueFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q7:InvalidRemarkValue" />
+  </wsdl:message>
   <wsdl:message name="IEmployeeManager_AddRemark_ResultNotFoundFaultFault_FaultMessage">
-    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q2:ResultNotFoundFault" />
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q8:ResultNotFoundFault" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeManager_AddRemark_InvalidRemarkSizeFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q9:InvalidRemarkSize" />
+  </wsdl:message>
+  <wsdl:message name="IEmployeeManager_AddRemark_InvalidIdValueFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q10:InvalidIdValue" />
   </wsdl:message>
   <wsdl:message name="IEmployeeManager_DeleteEmployeeById_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteEmployeeById" />
@@ -606,7 +782,7 @@
     <wsdl:part name="parameters" element="tns:DeleteEmployeeByIdResponse" />
   </wsdl:message>
   <wsdl:message name="IEmployeeManager_DeleteEmployeeById_ResultNotFoundFaultFault_FaultMessage">
-    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q3:ResultNotFoundFault" />
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q11:ResultNotFoundFault" />
   </wsdl:message>
   <wsdl:message name="IEmployeeManager_DeleteEmployees_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteEmployees" />
@@ -621,7 +797,7 @@
     <wsdl:part name="parameters" element="tns:GetEmployeeDetailsByIdResponse" />
   </wsdl:message>
   <wsdl:message name="IEmployeeReader_GetEmployeeDetailsById_FaultExceptionFault_FaultMessage">
-    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q4:FaultException" />
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/System.ServiceModel" name="detail" element="q12:FaultException" />
   </wsdl:message>
   <wsdl:message name="IEmployeeReader_GetAllEmployees_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEmployees" />
@@ -630,7 +806,7 @@
     <wsdl:part name="parameters" element="tns:GetAllEmployeesResponse" />
   </wsdl:message>
   <wsdl:message name="IEmployeeReader_GetAllEmployees_ResultNotFoundFaultFault_FaultMessage">
-    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q5:ResultNotFoundFault" />
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q13:ResultNotFoundFault" />
   </wsdl:message>
   <wsdl:message name="IEmployeeReader_GetEmployeesByName_InputMessage">
     <wsdl:part name="parameters" element="tns:GetEmployeesByName" />
@@ -639,18 +815,26 @@
     <wsdl:part name="parameters" element="tns:GetEmployeesByNameResponse" />
   </wsdl:message>
   <wsdl:message name="IEmployeeReader_GetEmployeesByName_ResultNotFoundFaultFault_FaultMessage">
-    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q6:ResultNotFoundFault" />
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/EmployeeService" name="detail" element="q14:ResultNotFoundFault" />
   </wsdl:message>
   <wsdl:portType name="IEmployeeManager">
     <wsdl:operation name="CreateEmployee">
       <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployee" message="tns:IEmployeeManager_CreateEmployee_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployeeResponse" message="tns:IEmployeeManager_CreateEmployee_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployeeEmployeeAlreadyExistsFaultFault" name="EmployeeAlreadyExistsFaultFault" message="tns:IEmployeeManager_CreateEmployee_EmployeeAlreadyExistsFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidNameValueFault" name="InvalidNameValueFault" message="tns:IEmployeeManager_CreateEmployee_InvalidNameValueFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidNameSizeFault" name="InvalidNameSizeFault" message="tns:IEmployeeManager_CreateEmployee_InvalidNameSizeFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidIdValueFault" name="InvalidIdValueFault" message="tns:IEmployeeManager_CreateEmployee_InvalidIdValueFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidRemarkValueFault" name="InvalidRemarkValueFault" message="tns:IEmployeeManager_CreateEmployee_InvalidRemarkValueFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/CreateEmployeeInvalidRemarkSizeFault" name="InvalidRemarkSizeFault" message="tns:IEmployeeManager_CreateEmployee_InvalidRemarkSizeFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddRemark">
       <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeManager/AddRemark" message="tns:IEmployeeManager_AddRemark_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEmployeeManager/AddRemarkResponse" message="tns:IEmployeeManager_AddRemark_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/AddRemarkInvalidRemarkValueFault" name="InvalidRemarkValueFault" message="tns:IEmployeeManager_AddRemark_InvalidRemarkValueFault_FaultMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/AddRemarkResultNotFoundFaultFault" name="ResultNotFoundFaultFault" message="tns:IEmployeeManager_AddRemark_ResultNotFoundFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/AddRemarkInvalidRemarkSizeFault" name="InvalidRemarkSizeFault" message="tns:IEmployeeManager_AddRemark_InvalidRemarkSizeFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmployeeManager/AddRemarkInvalidIdValueFault" name="InvalidIdValueFault" message="tns:IEmployeeManager_AddRemark_InvalidIdValueFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteEmployeeById">
       <wsdl:input wsaw:Action="http://tempuri.org/IEmployeeManager/DeleteEmployeeById" message="tns:IEmployeeManager_DeleteEmployeeById_InputMessage" />
@@ -696,6 +880,26 @@
         <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_CreateEmployee_EmployeeAlreadyExistsFaultFault_Fault" />
         <soap12:fault use="literal" name="EmployeeAlreadyExistsFaultFault" namespace="" />
       </wsdl:fault>
+      <wsdl:fault name="InvalidNameValueFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidNameValueFault_Fault" />
+        <soap12:fault use="literal" name="InvalidNameValueFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidNameSizeFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidNameSizeFault_Fault" />
+        <soap12:fault use="literal" name="InvalidNameSizeFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidIdValueFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidIdValueFault_Fault" />
+        <soap12:fault use="literal" name="InvalidIdValueFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidRemarkValueFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidRemarkValueFault_Fault" />
+        <soap12:fault use="literal" name="InvalidRemarkValueFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidRemarkSizeFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_CreateEmployee_InvalidRemarkSizeFault_Fault" />
+        <soap12:fault use="literal" name="InvalidRemarkSizeFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="AddRemark">
       <soap12:operation soapAction="http://tempuri.org/IEmployeeManager/AddRemark" style="document" />
@@ -707,9 +911,21 @@
         <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_AddRemark_output_policy" />
         <soap12:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="InvalidRemarkValueFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_AddRemark_InvalidRemarkValueFault_Fault" />
+        <soap12:fault use="literal" name="InvalidRemarkValueFault" namespace="" />
+      </wsdl:fault>
       <wsdl:fault name="ResultNotFoundFaultFault">
         <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_AddRemark_ResultNotFoundFaultFault_Fault" />
         <soap12:fault use="literal" name="ResultNotFoundFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidRemarkSizeFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_AddRemark_InvalidRemarkSizeFault_Fault" />
+        <soap12:fault use="literal" name="InvalidRemarkSizeFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InvalidIdValueFault">
+        <wsp:PolicyReference URI="#WSHttpBinding_IEmployeeManager_AddRemark_InvalidIdValueFault_Fault" />
+        <soap12:fault use="literal" name="InvalidIdValueFault" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="DeleteEmployeeById">

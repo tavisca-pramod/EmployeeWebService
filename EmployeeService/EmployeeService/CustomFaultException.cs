@@ -19,5 +19,4 @@ namespace EmployeeService
         [DataMember]
         public string Message { get; set; }
     }
-
 }

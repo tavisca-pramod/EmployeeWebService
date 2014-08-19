@@ -47,8 +47,7 @@ namespace EmployeeFixtures
                 }
             }
         }
-
-
+        
         [TestMethod]
         [ExpectedException(typeof(FaultException<ResultNotFoundFault>))]
         public void TryAddRemarkForNonExistingEmployee()
@@ -176,6 +175,86 @@ namespace EmployeeFixtures
                 employeeManagerClient.CreateEmployee(3, "Vaishnavi", "New Joinee");
                 
                 employeeManagerClient.DeleteEmployeeById(4);
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidNameSize>))]
+        public void TryCreateEmployeeWithInvalidNameSize()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.CreateEmployee(1, "David Earl Frederick", "New Joinee");
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidNameValue>))]
+        public void TryCreateEmployeeWithInvalidNameValue()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.CreateEmployee(1, "r#$%^12e", "New Joinee");
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidIdValue>))]
+        public void TryCreateEmployeeWithInvalidIdValue()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.CreateEmployee(-1, "Rohit", "New Joinee");
+            }
+        }
+        
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidNameValue>))]
+        public void TryCreateEmployeeWithNullNameParameter()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.CreateEmployee(1, null, "New Joinee");
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidRemarkValue>))]
+        public void TryCreateEmployeeWithNullRemarkParameter()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.CreateEmployee(1, "Rohit", null);
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidRemarkSize>))]
+        public void TryCreateEmployeeWithInvalidRemarkSize()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.CreateEmployee(1, "Rohit", "This remark is to validate the length of remark for a particular employee which should not be greater thatn 30 letters");
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidRemarkValue>))]
+        public void TryAddRemarkWithNullRemarkParameter()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.AddRemark(1,null);
+            }
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<InvalidRemarkSize>))]
+        public void TryAddRemarkWithInvalidRemarkSize()
+        {
+            using (var client = new EmployeeManagerClient())
+            {
+                client.AddRemark(1, "This remark is to validate the length of remark for a particular employee which should not be greater thatn 30 letters");
             }
         }
     }

@@ -24,19 +24,26 @@ namespace EmployeeService
                     (fault, "Employee with Id " + id + " already exists");
             }
 
-            Employee emp = new Employee();
-            emp.Id = id;
-            emp.Name = name;
+            Employee employee = GetEmployeeObject(id, name, remarkText);
+
+            _employees.Add(employee);
+
+            return employee;
+        }
+
+        private static Employee GetEmployeeObject(int id, string name, string remarkText)
+        {
+            Employee employee = new Employee();
+            employee.Id = id;
+            employee.Name = name;
 
             Remark remark = new Remark();
             remark.RemarkText = remarkText;
             remark.RemarkDate = DateTime.Now;
 
-            emp.Remarks = new List<Remark>();
-            emp.Remarks.Add(remark);
-            _employees.Add(emp);
-
-            return emp;
+            employee.Remarks = new List<Remark>();
+            employee.Remarks.Add(remark);
+            return employee;
         }
 
         public void AddRemark(int id, string remarkText)
