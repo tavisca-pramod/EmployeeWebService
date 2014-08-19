@@ -400,5 +400,27 @@ namespace EmployeeFixtures
                 }
             }
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(FaultException<ResultNotFoundFault>))]
+        public void TryDeleteAll()
+        {
+            using (var employeeManagerClient = new EmployeeManagerClient())
+            {
+                employeeManagerClient.CreateEmployeeWithRemark(1, "Rohit", "New Joinee");
+                employeeManagerClient.CreateEmployeeWithRemark(2, "Sumit", "New Joinee");
+              
+                using (var employeeReaderClient = new EmployeeReaderClient())
+                {
+                    var employeeCountBeforeDelete = employeeReaderClient.GetAllEmployees().Count;
+                   
+                    Assert.AreEqual(2, employeeCountBeforeDelete);
+                   
+                    employeeManagerClient.DeleteEmployees();
+
+                    employeeReaderClient.GetAllEmployees();
+                }
+            }
+        }
     }
 }

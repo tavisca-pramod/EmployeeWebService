@@ -161,7 +161,7 @@ namespace EmployeeService
 
         public void DeleteEmployees()
         {
-            _employees = new List<Employee>();
+            _employees.Clear();
         }
 
         public List<Employee> GetEmployeesWithRemark()
