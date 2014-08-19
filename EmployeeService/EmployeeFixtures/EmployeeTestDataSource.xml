@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<EmployeeFixtureData>
+
+  <CreateEmployee>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>Prashant</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+  </CreateEmployee>
+  
+  <AddRemarkForExisting>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>Prashant</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+    <NewRemark>Promotted</NewRemark>
+  </AddRemarkForExisting>
+  
+  <AddRemarkForNonExisting>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>Prashant</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+    <EmployeeIdToAddRemark>2</EmployeeIdToAddRemark>
+    <NewRemark>Promotted</NewRemark>
+  </AddRemarkForNonExisting>
+
+  <Employees>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>Prashant</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+    <SecondEmployeeId>2</SecondEmployeeId>
+    <SecondEmployeeName>Pramod</SecondEmployeeName>
+    <EmployeeCountWithRemark>1</EmployeeCountWithRemark>
+    <TotalNumberOfEmployees>2</TotalNumberOfEmployees>
+  </Employees>
+
+  <DeleteNonExistingEmployee>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>Prashant</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+    <SecondEmployeeId>2</SecondEmployeeId>
+    <SecondEmployeeName>Pramod</SecondEmployeeName>
+    <EmployeeIdToDelete>3</EmployeeIdToDelete>
+  </DeleteNonExistingEmployee>
+
+  <EmployeeWithInvalidNameSize>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>David Earl Frederick</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+  </EmployeeWithInvalidNameSize>
+
+  <EmployeeWithInvalidNameValue>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>r#$%^12e</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+  </EmployeeWithInvalidNameValue>
+
+  <EmployeeWithInvalidIdValue>
+    <EmployeeId>-1</EmployeeId>
+    <EmployeeName>Rohit</EmployeeName>
+    <EmployeeRemark>New Joinee</EmployeeRemark>
+  </EmployeeWithInvalidIdValue>
+  
+  <EmployeeWithInvalidRemarkSize>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>Rohit</EmployeeName>
+    <EmployeeRemark>This remark is to validate the length of remark for a particular employee which should not be greater thatn 30 letters</EmployeeRemark>
+  </EmployeeWithInvalidRemarkSize>
+
+  <EmployeesWithRemark>
+    <EmployeeId>1</EmployeeId>
+    <EmployeeName>Rohit</EmployeeName>
+    <EmployeeRemark>This remark is to validate the length of remark for a particular employee which should not be greater thatn 30 letters</EmployeeRemark>
+  </EmployeesWithRemark>
+  
+</EmployeeFixtureData>
+
+
