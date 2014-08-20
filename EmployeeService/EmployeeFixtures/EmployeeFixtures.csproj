@@ -103,6 +103,7 @@
   <ItemGroup>
     <Content Include="EmployeeTestDataSource.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <Choose>

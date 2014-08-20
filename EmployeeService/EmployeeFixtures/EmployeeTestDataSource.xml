@@ -13,6 +13,7 @@
     <EmployeeName>Prashant</EmployeeName>
     <EmployeeRemark>New Joinee</EmployeeRemark>
     <NewRemark>Promotted</NewRemark>
+    <RemarksCount>2</RemarksCount>
   </AddRemarkForExisting>
   
   <AddRemarkForNonExisting>
@@ -31,6 +32,7 @@
     <SecondEmployeeName>Pramod</SecondEmployeeName>
     <EmployeeCountWithRemark>1</EmployeeCountWithRemark>
     <TotalNumberOfEmployees>2</TotalNumberOfEmployees>
+    <EmployeesCountAfterDelete>1</EmployeesCountAfterDelete>
   </Employees>
 
   <DeleteNonExistingEmployee>

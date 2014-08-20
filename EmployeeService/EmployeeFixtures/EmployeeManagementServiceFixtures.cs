@@ -44,7 +44,7 @@ namespace EmployeeFixtures
             using (var client = new EmployeeManagerClient())
             {
                 Employee employee = client.CreateEmployeeWithRemark(id, name, remark);
-                Assert.AreEqual(1, employee.Id);
+                Assert.AreEqual(id, employee.Id);
             }
         }
 
@@ -77,7 +77,7 @@ namespace EmployeeFixtures
             var name = testContextInstance.DataRow["EmployeeName"].ToString();
             var remark = testContextInstance.DataRow["EmployeeRemark"].ToString();
             var remarkToBeAdded = testContextInstance.DataRow["EmployeeRemark"].ToString();
-
+            var remarksCount = Int32.Parse(testContextInstance.DataRow["RemarksCount"].ToString());
             using (var client = new EmployeeManagerClient())
             {
                 Employee employee = client.CreateEmployeeWithRemark(id, name, remark);
@@ -86,7 +86,7 @@ namespace EmployeeFixtures
                 using (var readerClient = new EmployeeReaderClient())
                 {
                     var employeeWithRemarks = readerClient.GetEmployeeDetailsById(1);
-                    Assert.AreEqual(2, employeeWithRemarks.Remarks.Count);
+                    Assert.AreEqual(remarksCount, employeeWithRemarks.Remarks.Count);
                 }
             }
         }
@@ -157,7 +157,6 @@ namespace EmployeeFixtures
             }
         }
 
-
         [TestMethod]
         [DeploymentItem("EmployeeTestDataSource.xml")]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML",
@@ -173,6 +172,8 @@ namespace EmployeeFixtures
             var employeeId = Int32.Parse(testContextInstance.DataRow["SecondEmployeeId"].ToString());
             var employeeName = testContextInstance.DataRow["SecondEmployeeName"].ToString();
 
+            var employeeCount = Int32.Parse(testContextInstance.DataRow["TotalNumberOfEmployees"].ToString());
+
             using (var employeeManagerClient = new EmployeeManagerClient())
             {
                 employeeManagerClient.CreateEmployeeWithRemark(id, name, remark);
@@ -181,7 +182,7 @@ namespace EmployeeFixtures
                 using (var employeeReaderClient = new EmployeeReaderClient())
                 {
                     var employees = employeeReaderClient.GetAllEmployees();
-                    Assert.AreEqual(2, employees.Count);
+                    Assert.AreEqual(employeeCount, employees.Count);
                 }
             }
         }
@@ -262,6 +263,7 @@ namespace EmployeeFixtures
 
             var employeeId = Int32.Parse(testContextInstance.DataRow["SecondEmployeeId"].ToString());
             var employeeName = testContextInstance.DataRow["SecondEmployeeName"].ToString();
+            var employeesCountAfterDelete = Int32.Parse(testContextInstance.DataRow["EmployeesCountAfterDelete"].ToString());
 
             using (var employeeManagerClient = new EmployeeManagerClient())
             {
@@ -272,10 +274,10 @@ namespace EmployeeFixtures
                 {
                     var employees = employeeReaderClient.GetAllEmployees();
 
-                    employeeManagerClient.DeleteEmployeeById(1);
+                    employeeManagerClient.DeleteEmployeeById(id);
 
                     var employeesAfterDelete = employeeReaderClient.GetAllEmployees();
-                    Assert.AreEqual(employees.Count, employeesAfterDelete.Count + 1);
+                    Assert.AreEqual(employeesCountAfterDelete, employeesAfterDelete.Count);
                 }
             }
         }
@@ -651,15 +653,15 @@ namespace EmployeeFixtures
         {
             var id = Int32.Parse(testContextInstance.DataRow["EmployeeId"].ToString());
             var name = testContextInstance.DataRow["EmployeeName"].ToString();
-        
+
             var employeeId = Int32.Parse(testContextInstance.DataRow["SecondEmployeeId"].ToString());
             var employeeName = testContextInstance.DataRow["SecondEmployeeName"].ToString();
-        
+
             using (var employeeManagerClient = new EmployeeManagerClient())
             {
-                employeeManagerClient.CreateEmployee(id,name);
+                employeeManagerClient.CreateEmployee(id, name);
                 employeeManagerClient.CreateEmployee(employeeId, employeeName);
-                
+
                 using (var employeeReaderClient = new EmployeeReaderClient())
                 {
                     employeeReaderClient.GetEmployeesWithRemark();
@@ -683,11 +685,11 @@ namespace EmployeeFixtures
             var employeeId = Int32.Parse(testContextInstance.DataRow["SecondEmployeeId"].ToString());
             var employeeName = testContextInstance.DataRow["SecondEmployeeName"].ToString();
             var totalEmployees = Int32.Parse(testContextInstance.DataRow["TotalNumberOfEmployees"].ToString());
-            
+
             using (var employeeManagerClient = new EmployeeManagerClient())
             {
                 employeeManagerClient.CreateEmployeeWithRemark(id, name, remark);
-                employeeManagerClient.CreateEmployeeWithRemark(employeeId,employeeName, remark);
+                employeeManagerClient.CreateEmployeeWithRemark(employeeId, employeeName, remark);
 
                 using (var employeeReaderClient = new EmployeeReaderClient())
                 {
